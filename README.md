@@ -1,5 +1,5 @@
 <p align ="center">
-      <img src="https://github.com/Hamza-Bchir/Projet-Bourse/assets/148462421/55eb5184-ed96-45e7-8403-970b6eb908ce" alt="Design sans titre" width="20%">
+      <img src="https://github.com/Hamza-Bchir/Projet-Bourse/assets/148462421/55eb5184-ed96-45e7-8403-970b6eb908ce" alt="Design sans titre" width="40%">
 </p>
 <h1 align="center">Projet-Bourse</h1>
 <h1>Sujet</h1>
@@ -31,7 +31,174 @@ Sélection des Indicateurs: L'utilisateur pourra sélectionner et afficher diff�
   <li>Recherche d'Actions: Une fonctionnalité de recherche permettra à l'utilisateur de rechercher des actions spécifiques par leur nom ou leur ticker symbol, facilitant ainsi l'accès aux données sur les actions souhaitées.</li>
   <li>Filtrage des Données: L'utilisateur pourra filtrer les données en fonction de critères tels que le volume des transactions, la variation des cours, etc., pour se concentrer sur les actions qui correspondent à ses critères d'investissement.</li>
 </ul>
+<h1>Cas d'utilisations</h1>
+<img src="https://github.com/Hamza-Bchir/Projet-Bourse/assets/148462421/c2db27ee-55ad-47c0-bbff-c7a78137abd2">
+<h2>Sprint n°1</h2>
+
+Durant le premier sprint nous choisissons de travailler sur les trois cas d'utilisations : "S'inscrire", "Se connecter" et "Choisir action".
+
+<h4>S'inscrire</h4>
+<ul>
+      <li>Préconditions :</li>
+      Champ du nom d'utilisateur bien formé (¬ null ∧ ¬ vide ∧ unique) ∧ mot de passe (¬ null ∧ ¬ vide)
+      <li>Postcondition :</li>
+      Le compte existe
+</ul>
+<table align="center">
+      <tr>
+            <td colspan ="2"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+      </tr>
+      <tr>
+            <td rowspan ="2">Préconditions</td>
+            <td>Champ du nom d'utilisateur bien formé</td>
+            <td>F</td>
+            <td>T</td>
+            <td>F</td>
+            <td>T</td>
+      </tr>
+      <tr>      
+            <td>Mot de passe</td>
+            <td>F</td>
+            <td>F</td>
+            <td>T</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td>Postcondition</td>
+            <td>Le compte existe</td>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td></td>
+            <td>Nombre de jeux de tests</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+      </tr>
+</table>
 
 
+<h4>Se connecter</h4>
+<ul>
+      <li>Préconditions :</li>
+      Champ du nom d'utilisateur bien formé (¬ null ∧ ¬ vide) ∧ mot de passe (¬ null ∧ ¬ vide) ∧ champ du nom utilisateur correspond a celui enregistré ∧ champ du mot de passe correspond a celui enregistré
+      <li>Postcondition :</li>
+      L'utilisateur est connecté au système
+</ul>
+<table align="center">
+      <tr>
+            <td colspan ="2"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+      </tr>
+      <tr>
+            <td rowspan ="4">Préconditions</td>
+            <td>Champ du nom d'utilisateur bien formé</td>
+            <td>F</td>
+            <td>T</td>
+            <td>T</td>
+            <td>T</td>
+            <td>T</td>
+      </tr>
+      <tr>      
+            <td>Mot de passe</td>
+            <td></td>
+            <td>F</td>
+            <td>T</td>
+            <td>T</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td>Nom d'utilisateur correspond à l'enregistrement</td>
+            <td></td>
+            <td></td>
+            <td>F</td>
+            <td>T</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td>Mot de passe correspond à l'enregistrement</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>F</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td>Postcondition</td>
+            <td>L'utilisateur est connecté au système</td>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td></td>
+            <td>Nombre de jeux de tests</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+      </tr>
+</table>
 
-
+<h4>Choisir une action</h4>
+<ul>
+      <li>Préconditions :</li>
+      L'utilisateur est connecté au système ∧ code mnémonique (¬ null ∧ ¬ vide) v nom de l'action (¬ null ∧ ¬ vide) ∧ l'action existe
+      <li>Postcondition :</li>
+      L'action s'affiche
+</ul>
+<table align="center">
+      <tr>
+            <td colspan ="2"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+      </tr>
+      <tr>
+            <td rowspan ="2">Préconditions</td>
+            <td>Champ du nom d'utilisateur bien formé</td>
+            <td>F</td>
+            <td>T</td>
+            <td>F</td>
+            <td>T</td>
+      </tr>
+      <tr>      
+            <td>Mot de passe</td>
+            <td>F</td>
+            <td>F</td>
+            <td>T</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td>Postcondition</td>
+            <td>Le compte existe</td>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+            <td>T</td>
+      </tr>
+      <tr>
+            <td></td>
+            <td>Nombre de jeux de tests</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+      </tr>
+</table>

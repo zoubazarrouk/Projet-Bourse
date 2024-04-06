@@ -1,0 +1,17 @@
+@startuml
+    rectangle "Application Bourse"{
+
+        'Creation d'utilisateurs
+        actor User
+
+        User ---> (Se connecter)
+        User --> (Consuler liste d'actions)
+        User --> (Visualiser graphique)
+        User --> (Rechercher action)
+
+        (Rechercher action par Volume de transactions)<|-- (Rechercher action)
+        (Rechercher action par variation)<|-- (Rechercher action)
+        (Se connecter) <. (S'inscrire): includes
+        (Visualiser graphique) <. (Choisir action): includes
+    }
+@enduml
